@@ -26,7 +26,7 @@ const projects = [
         tags: ['React.js','Tailwindcss','Javascript', 'MongoDB', 'Tailwind CSS','Node.js'],
         image: projectPlaceholder2,
         github: 'https://github.com/Vickz03/Eco-Tracker',
-        demo: '#',
+        demo: 'https://eco-tracker-rouge.vercel.app/',
     },
     {
         id: 3,
