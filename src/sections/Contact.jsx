@@ -22,30 +22,32 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
 
-        // Replace these with your actual EmailJS service ID, template ID, and public key
-        // emailjs.send(
-        //   'service_id',
-        //   'template_id',
-        //   {
-        //     from_name: form.name,
-        //     to_name: 'Vignesh',
-        //     from_email: form.email,
-        //     to_email: 'vignesh@example.com',
-        //     message: form.message,
-        //   },
-        //   'public_key'
-        // )
-
-        // Simulating a request for now
-        setTimeout(() => {
-            setLoading(false);
-            alert('Thank you. I will get back to you as soon as possible.');
-            setForm({
-                name: '',
-                email: '',
-                message: '',
+        // Replace these with your actual EmailJS keys
+        emailjs.send(
+            'service_v3zccta',
+            'template_do99cwn',
+            {
+                from_name: form.name,
+                to_name: 'Vignesh',
+                from_email: form.email,
+                to_email: 'vigneshselvam038@gmail.com',
+                message: form.message,
+            },
+            'Q38IAAky5iV6QG-_r'
+        )
+            .then(() => {
+                setLoading(false);
+                alert('Thank you. I will get back to you as soon as possible.');
+                setForm({
+                    name: '',
+                    email: '',
+                    message: '',
+                });
+            }, (error) => {
+                setLoading(false);
+                console.log(error);
+                alert('Something went wrong. Please try again.');
             });
-        }, 1000);
     };
 
     return (
