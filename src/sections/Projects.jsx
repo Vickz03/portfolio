@@ -7,6 +7,7 @@ import projectPlaceholder1 from '../assets/Medireach.png';
 import projectPlaceholder2 from '../assets/Ecotracker.png';
 import projectPlaceholder3 from '../assets/BrandTracker.png';
 import projectPlaceholder4 from '../assets/WeatherApp.png';
+import projectPlaceholder6 from '../assets/BookMark.png';
 
 
 const projects = [
@@ -55,6 +56,15 @@ const projects = [
         github: 'https://github.com/Vickz03/Weather-App',
         demo: '#',
     },
+   {
+    id: 6, 
+    title: 'SmartMark - Secure Bookmarks',
+    description: 'SmartMark is a premium, real-time bookmark management application designed for modern digital libraries. Built with Next.js 14 and Supabase, it features instant synchronization across devices, secure Google OAuth authentication, and advanced Row Level Security (RLS) to ensure user data privacy within a stunning glassmorphism UI.',
+    tags: ['Next.js ', 'Supabase', 'Tailwind CSS', 'TypeScript', 'OAuth 2.0', 'Real-time Sync', 'PostgreSQL'],
+    image: projectPlaceholder6,
+    github: 'https://github.com/Vickz03/SmartMark', // Update this with your repo link if different
+    demo: 'https://smartbookmark-omega.vercel.app',
+}
 ];
 
 const ProjectCard = ({ project, onClick }) => {
