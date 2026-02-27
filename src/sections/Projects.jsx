@@ -7,7 +7,7 @@ import projectPlaceholder1 from '../assets/Medireach.png';
 import projectPlaceholder2 from '../assets/Ecotracker.png';
 import projectPlaceholder3 from '../assets/BrandTracker.png';
 import projectPlaceholder4 from '../assets/WeatherApp.png';
-import projectPlaceholder6 from '../assets/BookMark.png';
+import projectPlaceholder6 from '../assets/Bookmark.png';
 
 
 const projects = [
