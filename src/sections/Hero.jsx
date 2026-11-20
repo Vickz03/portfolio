@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import HeroCanvas from '../components/HeroCanvas';
 
 const Hero = () => {
@@ -27,10 +29,10 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                     >
                         <p className="text-xl md:text-3xl text-gray-300 font-medium mt-2">
-                            Full Stack Developer
+                            Full Stack Developer & Software Engineer
                         </p>
                         <p className="text-base md:text-lg text-gray-400 mt-4 max-w-lg">
-                            I build modern, responsive, and high-performance web applications with a focus on aesthetics and user experience.
+                            Building high-performance MERN & Java production applications with scalable architectures and modern UI/UX.
                         </p>
                     </motion.div>
 
@@ -38,7 +40,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                        className="mt-10 flex gap-4"
+                        className="mt-8 flex flex-wrap gap-4"
                     >
                         <a
                             href="#contact"
@@ -52,6 +54,43 @@ const Hero = () => {
                             className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-primary/30 hover:scale-105"
                         >
                             Download CV
+                        </a>
+                    </motion.div>
+
+                    {/* Social Quick Connect */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                        className="mt-6 flex items-center gap-3 text-gray-400"
+                    >
+                        <span className="text-sm font-medium text-gray-400">Connect:</span>
+                        <a
+                            href="https://github.com/Vickz03"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-gray-800/80 border border-gray-700 flex items-center justify-center text-white hover:text-primary hover:border-primary transition-all duration-300 hover:scale-110"
+                            aria-label="GitHub"
+                        >
+                            <FaGithub size={18} />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/vignesh-s-01384025b/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-gray-800/80 border border-gray-700 flex items-center justify-center text-white hover:text-[#0077b5] hover:border-[#0077b5] transition-all duration-300 hover:scale-110"
+                            aria-label="LinkedIn"
+                        >
+                            <FaLinkedin size={18} />
+                        </a>
+                        <a
+                            href="https://leetcode.com/u/VigneshS03/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-gray-800/80 border border-gray-700 flex items-center justify-center text-white hover:text-[#FFA116] hover:border-[#FFA116] transition-all duration-300 hover:scale-110"
+                            aria-label="LeetCode"
+                        >
+                            <SiLeetcode size={18} />
                         </a>
                     </motion.div>
                 </div>

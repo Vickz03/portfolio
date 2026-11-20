@@ -9,12 +9,16 @@ const CustomCursor = () => {
         const mouseMove = (e) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
 
-            // Check if hovering over clickable element
+            // Check if hovering over clickable element without expensive style recalculation
             const target = e.target;
             setIsPointer(
-                window.getComputedStyle(target).cursor === 'pointer' ||
-                target.tagName.toLowerCase() === 'a' ||
-                target.tagName.toLowerCase() === 'button'
+                Boolean(
+                    target && (
+                        target.tagName === 'A' ||
+                        target.tagName === 'BUTTON' ||
+                        (target.closest && target.closest('a, button, [role="button"], input, textarea, select, .cursor-pointer'))
+                    )
+                )
             );
         };
 
@@ -23,7 +27,7 @@ const CustomCursor = () => {
     }, []);
 
     return (
-        <>
+        <div className="hidden md:block">
             <motion.div
                 className="fixed top-0 left-0 w-4 h-4 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-difference"
                 animate={{
@@ -42,7 +46,7 @@ const CustomCursor = () => {
                 }}
                 transition={{ type: 'tween', ease: 'backOut', duration: 0.2 }}
             />
-        </>
+        </div>
     );
 };
 

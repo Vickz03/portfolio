@@ -13,58 +13,74 @@ import projectPlaceholder6 from '../assets/Bookmark.png';
 const projects = [
     {
         id: 1,
-        title: 'Medi-Reach',
-        description: 'MediReach is a full-stack web application designed to connect users with nearby blood donors, healthcare volunteers, and support providers. The platform focuses on reducing medical response time by enabling quick communication between people in need and verified helpers.',
-        tags: ['React', 'Node.js', 'MongoDB', 'Firebase','tailwindcss'],
-        image: projectPlaceholder1,
-        github: 'https://github.com/Vickz03/Medi-reach',
+        title: 'Talent Card – Enterprise Onboarding & Workflow',
+        badge: 'Live Production',
+        description: 'A live enterprise application used for customer onboarding, approval, credit review, and back-office operations across BO Admin, Credit, and Sales teams. Engineered multi-stage approval workflows, Virtual Card & Credit Score capabilities, and Jest unit test suites for robust regression prevention.',
+        tags: ['React.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'REST APIs', 'Jest'],
+        image: projectPlaceholder,
+        github: 'https://github.com/Vickz03',
         demo: '#',
     },
     {
         id: 2,
+        title: 'SmartMark - Secure Bookmarks',
+        badge: 'Live App',
+        description: 'SmartMark is a premium, real-time bookmark management application designed for modern digital libraries. Built with Next.js 14 and Supabase, it features instant synchronization across devices, secure Google OAuth authentication, and advanced Row Level Security (RLS) to ensure user data privacy within a stunning glassmorphism UI.',
+        tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'TypeScript', 'OAuth 2.0', 'PostgreSQL'],
+        image: projectPlaceholder6,
+        github: 'https://github.com/Vickz03/SmartMark',
+        demo: 'https://smartbookmark-omega.vercel.app',
+    },
+    {
+        id: 3,
         title: 'Eco-Tracker',
+        badge: 'Live App',
         description: 'A smart, semi-automated Carbon Footprint Tracker built using the MERN stack, helping users monitor, understand, and reduce their daily CO₂ emissions. Features include automated travel calculation, lifestyle analysis, electricity estimations, food impact calculator, and a clean, modern dashboard UI.',
-        tags: ['React.js','Tailwindcss','Javascript', 'MongoDB', 'Tailwind CSS','Node.js'],
+        tags: ['React.js', 'Tailwind CSS', 'JavaScript', 'MongoDB', 'Node.js', 'Chart.js'],
         image: projectPlaceholder2,
         github: 'https://github.com/Vickz03/Eco-Tracker',
         demo: 'https://eco-tracker-rouge.vercel.app/',
     },
     {
-        id: 3,
+        id: 4,
+        title: 'Medi-Reach',
+        badge: 'Emergency Platform',
+        description: 'MediReach is a full-stack web application designed to connect users with nearby blood donors, healthcare volunteers, and support providers. The platform focuses on reducing medical response time by enabling quick communication between people in need and verified helpers.',
+        tags: ['React', 'Node.js', 'MongoDB', 'Firebase', 'Tailwind CSS'],
+        image: projectPlaceholder1,
+        github: 'https://github.com/Vickz03/Medi-reach',
+        demo: '#',
+    },
+    {
+        id: 5,
         title: 'Brand Mentors',
-        description: 'A productivity tool for managing tasks and projects with drag-and-drop functionality and team collaboration features.Brand Mentor is a smart analytics dashboard that helps businesses track brand profit, turnover, growth rate, product performance, and financial metrics in real time. Designed with a clean UI and visual insights for quick decision-making.',
-        tags: ['React.js','Javascript','HtML','Node.js','Vue.js', 'Express', 'MongoDB'],
+        badge: 'Analytics Dashboard',
+        description: 'Brand Mentor is a smart analytics dashboard that helps businesses track brand profit, turnover, growth rate, product performance, and financial metrics in real time. Designed with a clean UI and visual insights for quick decision-making.',
+        tags: ['React.js', 'JavaScript', 'HTML5', 'Node.js', 'Express', 'MongoDB'],
         image: projectPlaceholder3,
         github: 'https://github.com/Vickz03/Brand-mentors',
         demo: '#',
     },
     {
-        id: 4,
-        title: 'WeatherApp',
-        description: 'A weather checking application that provides users with real-time temperature, humidity, and wind speed using public weather APIs.',
-        tags: ['Javascript.js', 'HTML', 'weather API', 'CSS'],
-        image: projectPlaceholder4,
-        github: 'https://github.com/Vickz03/Weather-App',
+        id: 6,
+        title: 'Sea Border Detection System',
+        badge: 'Hackathon Finalist',
+        description: 'A Django-IoT maritime safety system designed to monitor vessel movement near national sea borders in real time. Features GPS module tracking, Leaflet.js live mapping, and automated alert systems. Presented as a national hackathon finalist.',
+        tags: ['Django', 'Python', 'IoT', 'GPS Modules', 'Leaflet.js', 'HTML5', 'CSS3'],
+        image: projectPlaceholder,
+        github: 'https://github.com/Vickz03/Sea-Border-Detection-System',
         demo: '#',
     },
     {
-        id: 5,
-        title: 'Seaboarder detections',
-        description: 'Seaboarder is an IoT-powered smart monitoring system built with Python, designed to track sea-level changes, tides, water quality, and coastal safety in real time. It helps predict risks and improves maritime awareness using sensor data and automated alerts.',
-        tags: ['Javascript.js', 'HTML', 'weather API', 'CSS','IOT','python','sensors','pycharm'],
-        image: projectPlaceholder,
+        id: 7,
+        title: 'Weather App',
+        badge: 'API Utility',
+        description: 'A real-time weather forecasting application built with React and OpenWeatherMap API, providing users with live temperature, humidity, and wind speed based on geolocation and user search.',
+        tags: ['React.js', 'JavaScript', 'OpenWeatherMap API', 'CSS3'],
+        image: projectPlaceholder4,
         github: 'https://github.com/Vickz03/Weather-App',
         demo: '#',
-    },
-   {
-    id: 6, 
-    title: 'SmartMark - Secure Bookmarks',
-    description: 'SmartMark is a premium, real-time bookmark management application designed for modern digital libraries. Built with Next.js 14 and Supabase, it features instant synchronization across devices, secure Google OAuth authentication, and advanced Row Level Security (RLS) to ensure user data privacy within a stunning glassmorphism UI.',
-    tags: ['Next.js ', 'Supabase', 'Tailwind CSS', 'TypeScript', 'OAuth 2.0', 'Real-time Sync', 'PostgreSQL'],
-    image: projectPlaceholder6,
-    github: 'https://github.com/Vickz03/SmartMark', // Update this with your repo link if different
-    demo: 'https://smartbookmark-omega.vercel.app',
-}
+    }
 ];
 
 const ProjectCard = ({ project, onClick }) => {
@@ -77,12 +93,19 @@ const ProjectCard = ({ project, onClick }) => {
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
             transition={{ duration: 0.3 }}
-            className="bg-gray-800 rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-primary/20 group"
+            className="bg-gray-800 rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-primary/20 group relative"
         >
             <div className="relative h-48 overflow-hidden">
+                {project.badge && (
+                    <div className="absolute top-3 right-3 z-10 bg-primary/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-white/20">
+                        {project.badge}
+                    </div>
+                )}
                 <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -128,8 +151,13 @@ const ProjectModal = ({ project, onClose }) => {
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6">
-                        <h2 className="text-3xl font-bold text-white">{project.title}</h2>
+                    <div className="absolute bottom-0 left-0 p-6 flex flex-col items-start gap-2">
+                        {project.badge && (
+                            <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full border border-white/20 shadow-md">
+                                {project.badge}
+                            </span>
+                        )}
+                        <h2 className="text-2xl sm:text-3xl font-bold text-white">{project.title}</h2>
                     </div>
                 </div>
 
@@ -156,14 +184,20 @@ const ProjectModal = ({ project, onClose }) => {
                         >
                             <FaGithub size={20} /> GitHub
                         </a>
-                        <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors"
-                        >
-                            <FaExternalLinkAlt size={18} /> Live Demo
-                        </a>
+                        {project.demo && project.demo !== '#' ? (
+                            <a
+                                href={project.demo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-primary/30"
+                            >
+                                <FaExternalLinkAlt size={16} /> Live Demo
+                            </a>
+                        ) : (
+                            <span className="flex items-center gap-2 bg-gray-800/80 border border-gray-700 text-gray-400 px-5 py-3 rounded-lg font-medium text-sm">
+                                <FaExternalLinkAlt size={14} className="opacity-50" /> Internal / Demo on Request
+                            </span>
+                        )}
                     </div>
                 </div>
             </motion.div>

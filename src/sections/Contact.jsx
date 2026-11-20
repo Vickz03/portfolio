@@ -12,6 +12,7 @@ const Contact = () => {
         message: '',
     });
     const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState({ type: '', message: '' });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,8 +22,9 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
+        setStatus({ type: '', message: '' });
 
-        // Replace these with your actual EmailJS keys
+        // EmailJS submission
         emailjs.send(
             'service_v3zccta',
             'template_do99cwn',
@@ -37,7 +39,10 @@ const Contact = () => {
         )
             .then(() => {
                 setLoading(false);
-                alert('Thank you. I will get back to you as soon as possible.');
+                setStatus({
+                    type: 'success',
+                    message: 'Thank you! Your message has been sent successfully. I will get back to you shortly.',
+                });
                 setForm({
                     name: '',
                     email: '',
@@ -45,8 +50,11 @@ const Contact = () => {
                 });
             }, (error) => {
                 setLoading(false);
-                console.log(error);
-                alert('Something went wrong. Please try again.');
+                console.error(error);
+                setStatus({
+                    type: 'error',
+                    message: 'Something went wrong. Please try again or email directly at vigneshselvam038@gmail.com.',
+                });
             });
     };
 
@@ -86,7 +94,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p className="text-gray-400 text-sm">Email</p>
-                                <a href="mailto:vignesh@example.com" className="text-white font-medium hover:text-primary transition-colors">
+                                <a href="mailto:vigneshselvam038@gmail.com" className="text-white font-medium hover:text-primary transition-colors">
                                     vigneshselvam038@gmail.com
                                 </a>
                             </div>
@@ -97,7 +105,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p className="text-gray-400 text-sm">Location</p>
-                                <p className="text-white font-medium">India</p>
+                                <p className="text-white font-medium">Coimbatore, Tamil Nadu, India</p>
                             </div>
                         </div>
                     </div>
@@ -163,6 +171,17 @@ const Contact = () => {
                                 required
                             />
                         </div>
+                        {status.message && (
+                            <div
+                                className={`p-4 rounded-lg text-sm font-medium ${
+                                    status.type === 'success'
+                                        ? 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-400'
+                                        : 'bg-rose-500/10 border border-rose-500/30 text-rose-400'
+                                }`}
+                            >
+                                {status.message}
+                            </div>
+                        )}
                         <button
                             type="submit"
                             disabled={loading}

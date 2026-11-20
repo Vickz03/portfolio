@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaDocker, FaPython, FaJava, FaDatabase } from 'react-icons/fa';
 import { TbBrandThreejs, TbBrandCpp, TbSql } from "react-icons/tb";
-import { SiTailwindcss, SiMongodb, SiExpress, SiFramer, SiRedux, SiPostman, SiMysql, SiPostgresql, SiFirebase, SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { SiTailwindcss, SiMongodb, SiExpress, SiFramer, SiRedux, SiPostman, SiMysql, SiPostgresql, SiFirebase, SiTypescript, SiNextdotjs, SiSpringboot, SiSupabase } from 'react-icons/si';
 
 const skillCategories = [
     {
@@ -10,27 +10,33 @@ const skillCategories = [
         title: 'Frontend',
         skills: [
             { name: 'React', icon: <FaReact />, level: 90, color: '#61DAFB' },
+            { name: 'Next.js', icon: <SiNextdotjs />, level: 85, color: '#FFFFFF' },
+            { name: 'TypeScript', icon: <SiTypescript />, level: 80, color: '#3178C6' },
+            { name: 'JavaScript', icon: <FaJs />, level: 85, color: '#F7DF1E' },
+            { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 95, color: '#38B2AC' },
             { name: 'HTML5', icon: <FaHtml5 />, level: 95, color: '#E34F26' },
             { name: 'CSS3', icon: <FaCss3Alt />, level: 90, color: '#1572B6' },
-            { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 95, color: '#38B2AC' },
-            { name: 'JavaScript', icon: <FaJs />, level: 85, color: '#F7DF1E' },
-            { name: 'Three.js', icon: <TbBrandThreejs />, level: 60, color: '#000000' },
-            { name: 'Framer Motion', icon: <SiFramer />, level: 70, color: '#0055FF' },
+            { name: 'Framer Motion', icon: <SiFramer />, level: 75, color: '#0055FF' },
+            { name: 'Three.js', icon: <TbBrandThreejs />, level: 60, color: '#38BDF8' },
         ]
     },
     {
         id: 'backend',
         title: 'Backend',
         skills: [
-            { name: 'Node.js', icon: <FaNodeJs />, level: 80, color: '#339933' },
-            { name: 'Express.js', icon: <SiExpress />, level: 75, color: '#000000' },
+            { name: 'Node.js', icon: <FaNodeJs />, level: 85, color: '#339933' },
+            { name: 'Express.js', icon: <SiExpress />, level: 80, color: '#E2E8F0' },
+            { name: 'Spring Boot', icon: <SiSpringboot />, level: 75, color: '#6DB33F' },
+            { name: 'REST APIs', icon: <SiPostman />, level: 85, color: '#FF6C37' },
         ]
     },
     {
         id: 'database',
         title: 'Database',
         skills: [
-            { name: 'MongoDB', icon: <SiMongodb />, level: 75, color: '#47A248' },
+            { name: 'MongoDB', icon: <SiMongodb />, level: 85, color: '#47A248' },
+            { name: 'PostgreSQL', icon: <SiPostgresql />, level: 80, color: '#4169E1' },
+            { name: 'Supabase', icon: <SiSupabase />, level: 80, color: '#3ECF8E' },
             { name: 'MySQL', icon: <SiMysql />, level: 70, color: '#4479A1' },
         ]
     },
@@ -39,8 +45,8 @@ const skillCategories = [
         title: 'Languages',
         skills: [
             { name: 'JavaScript', icon: <FaJs />, level: 85, color: '#F7DF1E' },
-            { name: 'Java', icon: <FaJava />, level: 70, color: '#007396' },
-            { name: 'Python', icon: <FaPython />, level: 65, color: '#3776AB' },
+            { name: 'Java', icon: <FaJava />, level: 75, color: '#007396' },
+            { name: 'Python', icon: <FaPython />, level: 70, color: '#3776AB' },
             { name: 'C++', icon: <TbBrandCpp />, level: 60, color: '#00599C' },
         ]
     },
@@ -48,8 +54,10 @@ const skillCategories = [
         id: 'tools',
         title: 'Tools',
         skills: [
-            { name: 'Git', icon: <FaGitAlt />, level: 85, color: '#F05032' },
-            { name: 'Postman', icon: <SiPostman />, level: 80, color: '#FF6C37' },
+            { name: 'Git & GitHub', icon: <FaGitAlt />, level: 85, color: '#F05032' },
+            { name: 'Postman', icon: <SiPostman />, level: 85, color: '#FF6C37' },
+            { name: 'Firebase', icon: <SiFirebase />, level: 80, color: '#FFCA28' },
+            { name: 'Docker', icon: <FaDocker />, level: 70, color: '#2496ED' },
         ]
     }
 ];

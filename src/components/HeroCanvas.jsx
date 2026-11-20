@@ -9,12 +9,12 @@ const HeroShape = () => {
             <ambientLight intensity={0.25} />
             <directionalLight position={[0, 0, 0.05]} />
             <mesh visible position={[0, 0, 0]}>
-                <sphereGeometry args={[1, 100, 200]} />
+                <sphereGeometry args={[1, 48, 48]} />
                 <MeshDistortMaterial
                     color="#6366f1"
                     attach="material"
-                    distort={0.5}
-                    speed={2}
+                    distort={0.45}
+                    speed={1.5}
                 />
             </mesh>
         </Float>
@@ -25,7 +25,8 @@ const HeroCanvas = () => {
     return (
         <Canvas
             camera={{ position: [0, 0, 5], fov: 25 }}
-            gl={{ preserveDrawingBuffer: true }}
+            dpr={[1, 1.5]}
+            gl={{ powerPreference: 'high-performance' }}
             className="w-full h-full absolute inset-0 z-[-1]"
         >
             <Suspense fallback={<CanvasLoader />}>

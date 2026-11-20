@@ -14,7 +14,7 @@ import CustomCursor from './components/CustomCursor';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-dark text-white overflow-x-hidden cursor-none">
+      <div className="relative z-0 bg-dark text-white overflow-x-hidden cursor-default md:cursor-none">
         <ScrollProgress />
         <CustomCursor />
         <Navbar />
